@@ -44,7 +44,7 @@ template <typename UnaryPredicate>
 Wert ComputeStraightHighCard(UnaryPredicate p) {
     NumRange<int> values(0, 13);
     const auto foo = ::search_n(values.rbegin(), values.rend(), 5, p);
-    return foo == values.rend() ? Five : Wert(*--foo.base());
+    return foo == values.rend() ? Five : Wert(*foo);
 }
 } // namespace
 
